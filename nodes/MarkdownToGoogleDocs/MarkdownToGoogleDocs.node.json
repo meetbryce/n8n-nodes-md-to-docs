@@ -4,7 +4,17 @@
 	"codexVersion": "1.0",
 	"categories": ["Data & Storage", "Productivity", "Google", "Markdown"],
 	"subcategories": ["Document Management", "File Processing", "Content Conversion"],
-	"alias": ["md", "markdown", "google docs", "gdocs", "docs", "document", "converter", "md-to-docs", "m-t-g"],
+	"alias": [
+		"md",
+		"markdown",
+		"google docs",
+		"gdocs",
+		"docs",
+		"document",
+		"converter",
+		"md-to-docs",
+		"m-t-g"
+	],
 	"resources": {
 		"primaryDocumentation": [
 			{

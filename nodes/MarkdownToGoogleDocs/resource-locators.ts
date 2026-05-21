@@ -82,8 +82,7 @@ export const resourceLocatorMethods = {
 		paginationToken?: string,
 	): Promise<INodeListSearchResult> {
 		try {
-			const results: INodeListSearchItems[] =[];
-
+			const results: INodeListSearchItems[] = [];
 
 			// Simple driveId parameter handling
 			let driveId = 'My Drive';
@@ -110,7 +109,7 @@ export const resourceLocatorMethods = {
 				qs.q += ' and sharedWithMe = true';
 			} else if (driveId && driveId !== 'My Drive') {
 				qs.driveId = driveId;
-				qs.corpora = "drive";
+				qs.corpora = 'drive';
 				qs.includeItemsFromAllDrives = true;
 				qs.supportsAllDrives = true;
 			}

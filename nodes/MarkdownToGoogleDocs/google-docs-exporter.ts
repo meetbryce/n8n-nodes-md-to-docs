@@ -55,7 +55,9 @@ export class GoogleDocsExporter {
 
 			// Check if user wants to also save to Google Drive (if targetFolderId is provided)
 			const targetFolderId = outputOptions?.targetFolderId;
-			const saveToGoogleDrive = targetFolderId && (typeof targetFolderId === 'object' ? targetFolderId.value : targetFolderId);
+			const saveToGoogleDrive =
+				targetFolderId &&
+				(typeof targetFolderId === 'object' ? targetFolderId.value : targetFolderId);
 
 			// Determine file extension based on MIME type
 			const fileExtensions: { [key: string]: string } = {
@@ -79,7 +81,9 @@ export class GoogleDocsExporter {
 			// Get content and size
 			const content = exportResponse.body;
 			const contentLength = exportResponse.headers['content-length'];
-			const fileSizeBytes = contentLength ? parseInt(contentLength, 10) : Buffer.byteLength(content);
+			const fileSizeBytes = contentLength
+				? parseInt(contentLength, 10)
+				: Buffer.byteLength(content);
 
 			let result: DocumentExportResult = {
 				success: true,
@@ -97,7 +101,8 @@ export class GoogleDocsExporter {
 			// Handle Google Drive save (optional, regardless of output mode)
 			if (saveToGoogleDrive) {
 				// Save to Google Drive using multipart upload
-				const targetFolder = typeof targetFolderId === 'object' ? targetFolderId.value : targetFolderId || 'root';
+				const targetFolder =
+					typeof targetFolderId === 'object' ? targetFolderId.value : targetFolderId || 'root';
 
 				// First create the file metadata
 				const metadata = {
