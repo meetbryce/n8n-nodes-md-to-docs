@@ -1,11 +1,13 @@
 # @meetbryce/n8n-nodes-md-to-docs
 
-> **Fork notice.** This is a published fork of [GiK986/n8n-nodes-md-to-docs](https://github.com/GiK986/n8n-nodes-md-to-docs) by [Georgi Kyosev](https://github.com/GiK986) (MIT). It exists to ship two changes that aren't in upstream yet:
+> **Fork notice.** This is a published fork of [GiK986/n8n-nodes-md-to-docs](https://github.com/GiK986/n8n-nodes-md-to-docs) by [Georgi Kyosev](https://github.com/GiK986) (MIT), released on npm as [`@meetbryce/n8n-nodes-md-to-docs`](https://www.npmjs.com/package/@meetbryce/n8n-nodes-md-to-docs). It exists to ship two changes that aren't in upstream yet:
 >
 > - **Render block-level markdown in placeholder values.** Opt-in via a new "Parse Placeholder Values As Markdown" toggle. The original package only rendered markdown in the Main Content placeholder. See [upstream PR #3](https://github.com/GiK986/n8n-nodes-md-to-docs/pull/3).
 > - **Bump `n8n-workflow` to clear critical/high security CVEs** (form-data, lodash). See [upstream PR #4](https://github.com/GiK986/n8n-nodes-md-to-docs/pull/4).
 >
-> If those land upstream this fork will either be archived or kept as a thin wrapper. The node ID (`markdownToGoogleDocs`) is unchanged, so workflows built against the upstream package keep working after switching.
+> **This fork will be deprecated once those PRs merge.** It only exists to bridge the gap until upstream ships the same changes. When that happens, `@meetbryce/n8n-nodes-md-to-docs` gets marked deprecated on npm with a pointer back to the upstream package — switch back to `n8n-nodes-md-to-docs` at that point.
+>
+> Note: n8n keys community nodes by package name, so the node type here is `@meetbryce/n8n-nodes-md-to-docs.markdownToGoogleDocs`. Switching between this fork and the upstream package means re-adding the node in any workflow that uses it — n8n keeps the old node's parameters but shows it as unrecognized until you swap it.
 
 ![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
 
@@ -29,10 +31,16 @@ This is an n8n community node. It lets you use **Markdown to Google Docs** conve
 
 ## Installation
 
-Install in your n8n instance:
+Install in your n8n instance via **Settings → Community Nodes → Install**, using the package name:
+
+```
+@meetbryce/n8n-nodes-md-to-docs
+```
+
+Or install directly with npm:
 
 ```bash
-npm install n8n-nodes-md-to-docs
+npm install @meetbryce/n8n-nodes-md-to-docs
 ```
 
 **⚠️ Important: Restart n8n server after installation** - The node requires a complete server restart to load properly.
