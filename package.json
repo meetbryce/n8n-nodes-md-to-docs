@@ -1,6 +1,6 @@
 {
 	"name": "@meetbryce/n8n-nodes-md-to-docs",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "n8n community node for Markdown to Google Docs conversion. Fork of n8n-nodes-md-to-docs with block-level markdown rendering in placeholder values.",
 	"keywords": [
 		"n8n-community-node-package",
