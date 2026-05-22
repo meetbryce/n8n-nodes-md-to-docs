@@ -1,19 +1,35 @@
 {
-	"name": "n8n-nodes-md-to-docs",
-	"version": "0.5.2",
-	"description": "This is an n8n community node. It lets you use **Markdown to Google Docs** conversion in your n8n workflows.",
+	"name": "@meetbryce/n8n-nodes-md-to-docs",
+	"version": "1.0.0",
+	"description": "n8n community node for Markdown to Google Docs conversion. Fork of n8n-nodes-md-to-docs with block-level markdown rendering in placeholder values.",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"n8n",
+		"markdown",
+		"google-docs",
+		"google-drive",
+		"document-generation"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/GiK986/n8n-nodes-md-to-docs#readme",
+	"homepage": "https://github.com/meetbryce/n8n-nodes-md-to-docs#readme",
 	"author": {
-		"name": "Georgi Kyosev",
-		"email": "g.kyosev86@gmail.com"
+		"name": "Bryce York",
+		"email": "bryce@meetbryce.com",
+		"url": "https://github.com/meetbryce"
 	},
+	"contributors": [
+		{
+			"name": "Georgi Kyosev",
+			"email": "g.kyosev86@gmail.com",
+			"url": "https://github.com/GiK986"
+		}
+	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/GiK986/n8n-nodes-md-to-docs.git"
+		"url": "https://github.com/meetbryce/n8n-nodes-md-to-docs.git"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"engines": {
 		"node": ">=20.15"
@@ -29,7 +45,7 @@
 		"prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes package.json"
 	},
 	"files": [
-		"dist"
+		"dist/nodes/**/*"
 	],
 	"n8n": {
 		"n8nNodesApiVersion": 1,

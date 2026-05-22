@@ -1,4 +1,11 @@
-# n8n-nodes-md-to-docs
+# @meetbryce/n8n-nodes-md-to-docs
+
+> **Fork notice.** This is a published fork of [GiK986/n8n-nodes-md-to-docs](https://github.com/GiK986/n8n-nodes-md-to-docs) by [Georgi Kyosev](https://github.com/GiK986) (MIT). It exists to ship two changes that aren't in upstream yet:
+>
+> - **Render block-level markdown in placeholder values.** Opt-in via a new "Parse Placeholder Values As Markdown" toggle. The original package only rendered markdown in the Main Content placeholder. See [upstream PR #3](https://github.com/GiK986/n8n-nodes-md-to-docs/pull/3).
+> - **Bump `n8n-workflow` to clear critical/high security CVEs** (form-data, lodash). See [upstream PR #4](https://github.com/GiK986/n8n-nodes-md-to-docs/pull/4).
+>
+> If those land upstream this fork will either be archived or kept as a thin wrapper. The node ID (`markdownToGoogleDocs`) is unchanged, so workflows built against the upstream package keep working after switching.
 
 ![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
 

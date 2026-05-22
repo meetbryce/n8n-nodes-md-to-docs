@@ -1,9 +1,9 @@
-import {
+import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeConnectionTypes,
+	NodeConnectionType,
 } from 'n8n-workflow';
 import { NodeOperationError } from 'n8n-workflow';
 
@@ -26,8 +26,8 @@ export class MarkdownToGoogleDocs implements INodeType {
 		defaults: {
 			name: 'Markdown to Google Docs',
 		},
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
+		inputs: ['main' as NodeConnectionType],
+		outputs: ['main' as NodeConnectionType],
 		usableAsTool: true,
 		credentials: [
 			{
